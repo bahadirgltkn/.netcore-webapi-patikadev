@@ -28,8 +28,8 @@ namespace WebApi.Controllers
         public ActionResult GetGenres()
         {
             GetGenresQuery query = new GetGenresQuery(_dbContext, _mapper);
-            var obj = query.Handle();
-            return Ok(obj);
+            var result = query.Handle();
+            return Ok(result);
         }
 
 
@@ -41,8 +41,8 @@ namespace WebApi.Controllers
             GetGenreDetailQueryValidator validator = new GetGenreDetailQueryValidator();
             validator.ValidateAndThrow(query);
 
-            var obj = query.Handle();
-            return Ok(obj);
+            var result = query.Handle();
+            return Ok(result);
         }
 
 
