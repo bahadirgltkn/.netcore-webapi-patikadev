@@ -7,10 +7,10 @@ namespace WebApi.Application.GenreOperations.Commands.UpdateGenre
     public class UpdateGenreCommand
     {
         public int GenreId { get; set; }
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         public UpdateGenreModel Model { get; set; }
 
-        public UpdateGenreCommand(BookStoreDbContext dbContext)
+        public UpdateGenreCommand(IBookStoreDbContext dbContext)
         {
             _dbContext = dbContext;
         }
